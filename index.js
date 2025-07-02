@@ -23,4 +23,17 @@ bot.onText(/\/start/, (msg) => {
       ]]
     }
   });
+  // Kirim keyboard mini app di bawah kolom input (seperti Hoki99)
+  bot.sendMessage(chatId, `Klik tombol di bawah untuk masuk langsung:`, {
+    reply_markup: {
+      keyboard: [[
+        {
+          text: '🔗 Mulai Sekarang',
+          web_app: { url: 'https://short-it.pro/tokyo99' }
+        }
+      ]],
+      resize_keyboard: true,
+      one_time_keyboard: false
+    }
+  });
 });
